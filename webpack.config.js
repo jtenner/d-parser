@@ -12,7 +12,7 @@ let buildConfig = (useBabel, minify, name) => ({
   output: {
     path: path.join(__dirname, '/dist/'),
     filename: '[name].js',
-    library: 'dr',
+    library: 'dparser',
     libraryTarget: 'umd'
   },
   module: {

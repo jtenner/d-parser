@@ -28,7 +28,7 @@ Roll = count:Number "d" value:Number {
   return {
     type: 'roll',
     count: count,
-    value: Math.min(value, 2)
+    value: Math.max(value, 2)
   };
 } / Static
 

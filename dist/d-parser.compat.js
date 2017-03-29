@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["dr"] = factory();
+		exports["dparser"] = factory();
 	else
-		root["dr"] = factory();
+		root["dparser"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -318,7 +318,7 @@ module.exports = /*
           return {
             type: 'roll',
             count: count,
-            value: value
+            value: Math.max(value, 2)
           };
         },
         peg$c16 = function(value) {
@@ -331,7 +331,7 @@ module.exports = /*
         peg$c18 = peg$classExpectation(["\t", "\r", "\n", " "], false, false),
         peg$c19 = /^[0-9]/,
         peg$c20 = peg$classExpectation([["0", "9"]], false, false),
-        peg$c21 = function() { return parseInt(text()) },
+        peg$c21 = function() { return parseInt(text()); },
 
         peg$currPos          = 0,
         peg$savedPos         = 0,

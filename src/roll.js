@@ -1,0 +1,1 @@
+module.exports = (input) => require('./evaluate')(require('./parser.pegjs').parse(input));

@@ -496,10 +496,7 @@ module.exports = /*
           if (s3 !== peg$FAILED) {
             s4 = peg$parse_();
             if (s4 !== peg$FAILED) {
-              s5 = peg$parseGrouping();
-              if (s5 === peg$FAILED) {
-                s5 = peg$parseProduct();
-              }
+              s5 = peg$parseProduct();
               if (s5 !== peg$FAILED) {
                 peg$savedPos = s0;
                 s1 = peg$c7(s1, s5);

@@ -9,7 +9,7 @@ Sum = left:Product _ operator:("+" / "-") _ right:Sum {
   }
 } / Product
 
-Product = left:(Grouping) _ "*" _ right:(Grouping / Product) {
+Product = left:Grouping _ "*" _ right:Product {
   return {
     type: 'product',
     left: left,
